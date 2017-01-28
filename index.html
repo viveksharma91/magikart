@@ -17,7 +17,11 @@
    background-color: #2f2f2f;
    color: #ffffff;
   }
-
+.navbar .navbar-nav > li.open > a:hover,
+.navbar .navbar-nav > li.open > a:focus {
+  background-color: teal;
+  color: #fff;
+}
   .navbar {
     margin-bottom: 0;
     background-color: #f4511e;
@@ -28,7 +32,9 @@
     letter-spacing: 4px;
     border-radius: 0;
 }
-
+.navbar-nav > li > .dropdown-menu { 
+	background-color: #f4511e; 
+	}
 .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
 }
@@ -85,24 +91,31 @@
 
 
   <!-- Navbar -->
- <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Magikart</a>
+    <a class="navbar-brand" href="#"> <font size="6"> <b>magikart</b> </font></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#services">SERVICES</a></li>
-	<li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
+  
+    <ul class="nav navbar-nav navbar-right">
+	  <li class="active"><a href="#services">SERVICES</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li class="dropdown-submenu ">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCTS
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-menu-left">
+          <li><a href="#">Personalized Gifts</a></li>
+          <li><a href="#">Business Products</a></li>
+          <li><a href="#">Personalized Clothing</a></li>
+          <li><a href="#">Personalized Bags</a></li>
+          <li><a href="#">Greetings</a></li>
+          <li><a href="#">Marketing Products</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+     </div>
 </nav>
 <header class="w3-display-container w3-content w3-wide text-center" >
 	<br></br>
@@ -296,7 +309,7 @@
 <div id="about" class="container-fluid bg-1 ">
 	<br></br>
 	
-      <span class="text-center"><h2 >ABOUT US</h2> </span><br>
+      <span class="text-center"><h2 >ABOUT US</h2> </span><p></p>
       <p align="justify" > Magikart is a complete store for all types of customized  printing and gifting requirements.  We are highly qualified in graphic design and specialized in Printing! Headquartered in Chandigarh, we conduct business locally and nationwide . We specialize in graphic design, branding, print design and other creative/technical disciplines. We possess the professional and technical expertise you expect from a large firm without compromising on our philosophy to truly connect with our customers.    </p><br>
       <h4>Personalized Gifitng</h4>
       <p align="justify" > Personalized gifts are a perfect way of gifting that will never fail to make a statement on the receiver. It shows your extra care and love and helps bringing a true smile on your loved one’s faces. So, be it any occasion or relation, these gift items are the best way to spread the warmth of your love. We have a huge range of personalized greeting cards, mugs & sippers, T-shirts, photo frames, sling bags and cushions to make sure that you express right feelings to your loved one's. So celebrate joyous moments of your life with one of a kind gift for everyone on your list. </p>
@@ -313,19 +326,17 @@
    
 
 <!--contact form-->
-<div id="contact" class="container-fluid bg-2">
+<div id="contact" class="container-fluid bg-2 text-center">
 	<span style="color:#FFFFFF;" >
-		<br></br>
+		
 			
   <h2 >CONTACT US</h2><br>
-  <div class="row">
-    <div class="col-sm-5">
+  
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Chandigarh, India</p>
       <p><span class="glyphicon glyphicon-phone"></span> +91 7009152474</p>
       <p><span class="glyphicon glyphicon-envelope"></span> tomagikart@gmail.com</p>
-    </div>
-      </div>
+   
   </span>
 </div>
 
