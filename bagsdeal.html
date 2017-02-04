@@ -108,6 +108,7 @@ footer {
 <script>
 $(document).ready(function() {
 $('.thumbnail').click(function(){
+	$('.navbar').hide();
       $('.modal-body').empty();
   	var title = $(this).parent('a').attr("title");
   	$('.modal-title').html(title);
