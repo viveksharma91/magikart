@@ -12,6 +12,54 @@
    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <style>
+	  
+	  /* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
 
 .navbar .navbar-nav > li.open > a:hover,
 .navbar .navbar-nav > li.open > a:focus {
@@ -56,19 +104,25 @@ footer {
 }
 
 
-.modal-dialog {width:600px;}
-.thumbnail {margin-bottom:6px;}
+
 </style>
 
 <script>
 $(document).ready(function() {
 $('.thumbnail').click(function(){
+	$('.navbar').hide();
       $('.modal-body').empty();
   	var title = $(this).parent('a').attr("title");
   	$('.modal-title').html(title);
   	$($(this).parents('div').html()).appendTo('.modal-body');
   	$('#myModal').modal({show:true});
 });
+	$('#b1').click(function(){
+		$('.navbar').show();
+	});
+	$('#b2').click(function(){
+		$('.navbar').show();
+	});
 });
 
 </script>
@@ -133,7 +187,7 @@ $('.thumbnail').click(function(){
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">PERSONALIZED BUSINESS CARD HOLDER DEALS</h1>
+                <h1 class="page-header">PERSONALIZED BUSINESS CARD HOLDERS DEALS</h1>
                 
             </div>
 
@@ -142,19 +196,11 @@ $('.thumbnail').click(function(){
   <div class="row">
  
    
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 1" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 3" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 4" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 5" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 6" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 8" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 9" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 10" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 11" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 12" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 13" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-   
+      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="PERSONALIZED BUSINESS CARD HOLDERS" href="#"><img class="thumbnail img-responsive" src="/businesscardholder/bch0.jpg"></a></div>
+      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="PERSONALIZED BUSINESS CARD HOLDERS" href="#"><img class="thumbnail img-responsive" src="/businesscardholder/bch1.jpg"></a></div>
+      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="PERSONALIZED BUSINESS CARD HOLDERS" href="#"><img class="thumbnail img-responsive" src="/businesscardholder/bch2.jpg"></a></div>
+      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="PERSONALIZED BUSINESS CARD HOLDERS" href="#"><img class="thumbnail img-responsive" src="/businesscardholder/bch3.JPG"></a></div>
+           <!--Magikart-->
     <hr>
     
     <hr>
@@ -164,15 +210,15 @@ $('.thumbnail').click(function(){
   <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-		<button class="close" type="button" data-dismiss="modal">×</button>
+		<button id="b1" class="close" type="button" data-dismiss="modal">×</button>
 		<h3 class="modal-title">Heading</h3>
 	</div>
 	<div class="modal-body">
 		
 	</div>
 	<div class="modal-footer">
-		<p align="left">Price:</p>
-		<button class="btn btn-default" data-dismiss="modal">Close</button>
+		<p align="left">PERSONALIZED CUSHION</p>
+		<button id="b2" class="btn btn-default" data-dismiss="modal">Close</button>
 	</div>
    </div>
   </div>
