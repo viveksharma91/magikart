@@ -12,13 +12,50 @@
    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <style>
-
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
 .navbar .navbar-nav > li.open > a:hover,
 .navbar .navbar-nav > li.open > a:focus {
   background-color: teal;
   color: #fff;
 }
-
   .navbar {
     margin-bottom: 0;
     background-color: #f4511e;
@@ -29,15 +66,12 @@
     letter-spacing: 4px;
     border-radius: 0;
 }
-
 .navbar-nav > li > .dropdown-menu { 
 	background-color: #f4511e; 
 	}
-
 .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
 }
-
 .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
     
@@ -50,27 +84,28 @@
 .thumb {
     margin-bottom: 30px;
 }
-
 footer {
     margin: 50px 0;
 }
-
-
-.modal-dialog {width:600px;}
-.thumbnail {margin-bottom:6px;}
 </style>
 
 <script>
 $(document).ready(function() {
 $('.thumbnail').click(function(){
+	$('.navbar').hide();
       $('.modal-body').empty();
   	var title = $(this).parent('a').attr("title");
   	$('.modal-title').html(title);
   	$($(this).parents('div').html()).appendTo('.modal-body');
   	$('#myModal').modal({show:true});
 });
+	$('#b1').click(function(){
+		$('.navbar').show();
+	});
+	$('#b2').click(function(){
+		$('.navbar').show();
+	});
 });
-
 </script>
 <head>
 
@@ -133,7 +168,7 @@ $('.thumbnail').click(function(){
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">BUSINESS PRODUCT</h1>
+                <h1 class="page-header">BUSINESS PRODUCTS</h1>
                 
             </div>
 
@@ -142,20 +177,13 @@ $('.thumbnail').click(function(){
   <div class="row">
  
    
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 1" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 3" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 4" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 5" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 6" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 8" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 9" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 10" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 11" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 12" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 13" href="#"><img class="thumbnail img-responsive" src="http://placehold.it/400x300"></a></div>
-   
-    <hr>
+      <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Personalized Cushion" href="#"><img class="thumbnail img-responsive" src="/businessproducts/bp1.jpg"></a></div>
+      <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Personalized Cushion" href="#"><img class="thumbnail img-responsive" src="/businessproducts/bp4.jpg"></a></div>
+      <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Personalized Cushion" href="#"><img class="thumbnail img-responsive" src="/businessproducts/bp2.jpg"></a></div>
+      <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Personalized Cushion" href="#"><img class="thumbnail img-responsive" src="/businessproducts/bp3.jpg"></a></div>
+      <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Personalized Calendar" href="#"><img class="thumbnail img-responsive" src="/businessproducts/bp5.jpg"></a></div>
+      <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Personalized Keychain" href="#"><img class="thumbnail img-responsive" src="/businessproducts/bp6.jpg"></a></div>
+         <hr>
     
     <hr>
   </div>
@@ -164,15 +192,15 @@ $('.thumbnail').click(function(){
   <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-		<button class="close" type="button" data-dismiss="modal">×</button>
+		<button id="b1" class="close" type="button" data-dismiss="modal">×</button>
 		<h3 class="modal-title">Heading</h3>
 	</div>
 	<div class="modal-body">
 		
 	</div>
 	<div class="modal-footer">
-		<p align="left">Price:</p>
-		<button class="btn btn-default" data-dismiss="modal">Close</button>
+		<p align="left">www.magikart.co.in</p>
+		<button id ="b2" class="btn btn-default" data-dismiss="modal">Close</button>
 	</div>
    </div>
   </div>
@@ -198,4 +226,3 @@ $('.thumbnail').click(function(){
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-
