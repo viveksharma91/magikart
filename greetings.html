@@ -101,12 +101,19 @@ footer {
     margin: 50px 0;
 }
 
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
 
+.photo {
+    display: table;
+}
+.photo a {
+    vertical-align: middle;
+    display: table-cell;
+}
+.photo img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
 
 </style>
 
@@ -199,7 +206,7 @@ $('.thumbnail').click(function(){
   <div class="row">
  
    
-      <div class="col-lg-6 col-sm-6 col-xs-6 vcenter"><a title="Birthday Card" href="#"><img class="thumbnail img-responsive" src="/greetings/i1.jpg"></a>Birthday Card<br></div>
+      <div class="col-lg-6 col-sm-6 col-xs-6 photo"><a title="Birthday Card" href="#"><img class="thumbnail img-responsive" src="/greetings/i1.jpg"><br>Birthday Card</a><br></div>
       <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Thank You Card" href="#"><img class="thumbnail img-responsive" src="/greetings/i2.jpg"></a>Thank You Card<br></div>
       <div class="col-lg-6 col-sm-6 col-xs-6"><a title="Invitation" href="#"><br><img class="thumbnail img-responsive" src="/greetings/i3.jpg"></a>Invitation</div>
       
