@@ -222,7 +222,7 @@ s0.parentNode.insertBefore(s1,s0);
   </div>
   <div class="w3-container w3-xlarge">
     <p style="color:black;">
-    <i><b style="font-size: 18px;">Personalized Round Neck T-Shirts</b></i><br>
+    <i><b style="font-size: 18px;">Personalized T-Shirts</b></i><br>
     <span class="w3-xxlarge w3-text-red"><b>Starting From</b></span></p>
     <p style="color:black;">Earlier <del> <i class="fa fa-inr"></i>300</del> <span class="">per</span><span class="w3-tag w3-yellow">Article</span><br>
      Now only <i class="fa fa-inr"></i>250 </p>
@@ -265,7 +265,7 @@ s0.parentNode.insertBefore(s1,s0);
   </div>
   <div class="w3-container w3-xlarge w3-yellow">
     <p>
-    <i><b style="font-size: 18px;">Personalized Business Card Holders</b></i><br>
+    <i><b style="font-size: 18px;">Personalized Card Holders</b></i><br>
     <span class="w3-xxlarge w3-text-red"><b>Staring From</b></span></p>
     <p>Earlier <del> <i class="fa fa-inr"></i>400</del> <span class="">per</span><span class="">Article</span><br>
     Now only <i class="fa fa-inr"></i>299 </p>
@@ -462,10 +462,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <script>
 $(document).ready(function(){
 	
-   $("#content-slider").lightSlider({
+if ($(window).width() > 999) {
+$("#content-slider").lightSlider({
                 loop:true,
                 keyPress:true
             });
+}
+else {
+   
+}
 	
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
